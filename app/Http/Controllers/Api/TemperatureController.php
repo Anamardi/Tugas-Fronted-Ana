@@ -33,14 +33,4 @@ class TemperatureController extends Controller
         ], 201);
     }
 
-    function putTemperature(Request $request){
-        $value = $request->temperature;
-
-        $temperature = Temperature::create([
-            'value' => $value
-        ]);
-        return response()->json([
-
-        ], 201);
-    }
 }
