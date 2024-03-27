@@ -83,9 +83,5 @@ Route::prefix('v1/devices')->name('devices.')->group(function () {
 
 
 // Route temperature
-// mengambil data temperature GET
-// Route butuh 2 parameter/ argumen
-// 1. URL   -> http://127.0.0.1:8000/api/v1/temperature
-// 2. Lokasi file controller -> []
 Route::get('v1/temperature', [TemperatureController::class, 'getTemperature']);
 Route::post('v1/temperature', [TemperatureController::class, 'insertTemperature']);

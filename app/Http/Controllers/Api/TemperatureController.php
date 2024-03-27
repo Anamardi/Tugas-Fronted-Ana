@@ -32,5 +32,5 @@ class TemperatureController extends Controller
             "data"      => $temperature
         ], 201);
     }
-
+    
 }
