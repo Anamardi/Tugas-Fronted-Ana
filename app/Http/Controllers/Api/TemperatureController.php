@@ -33,4 +33,26 @@ class TemperatureController extends Controller
         ], 201);
     }
     
+    function updateTemperature(Request $request, $id){
+
+        $temperature = Temperature::findOrFail($id);
+        $temperature->update($request->only(['New value']));
+        $temperature->save();
+
+        return response()->json([
+            "message"   => "Data temperature berhasil diupdate",
+            "data"      => $temperature
+        ], 201);
+    }
+
+    function destroyTemperature($id){
+
+        $temperature = Temperature::findOrFail($id);
+        $temperature->delete();
+
+        return response()->json([
+            "message"   => "Data temperature berhasil didelete",
+            "data"      => $temperature
+        ], 201);
+    }
 }
