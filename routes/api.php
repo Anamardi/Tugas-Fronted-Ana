@@ -78,11 +78,3 @@ Route::prefix('v1/devices')->name('devices.')->group(function () {
     Route::put('/{code}', [DeviceController::class, 'update'])->name('update');
     Route::delete('/{code}', [DeviceController::class, 'destroy'])->name('delete');
 });
-
-
-//Route Temperature
-//mengambil data temperature GET
-//route butuh 2 parameter/argumen
-//1. URL -> http://127.0.0.1:8000/api/v1/temperature
-//2. Lokasi file controller
-Route::get('v1/temperature', [TemperatureController::class, 'getTemperature']);
